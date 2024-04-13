@@ -42,7 +42,7 @@ ip=$(hostname -I)
 mac=$(ip link | grep "link/ether" | awk '{print $2}')
 
 #SUDO
-cmnd=$(cat /var/log/sudo/sudo_config | grep "COMM" |wc -l)
+cmnd=$(cat /var/log/sudo/sudo_config | grep "COMM" | wc -l)
 
 wall "	Architecture: $arch
 	CPU physical: $CPU
